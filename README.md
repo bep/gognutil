@@ -12,3 +12,9 @@ For a similar project with lots of these util implemented in Go, see [go-coreuti
 Available Commands: 
   seq         Print a sequence of numbers
 ```
+
+## Building and running
+
+If you have `make` installed, just run `make`. The executale will be built to `bin`. Here it sits alongside scripts for running the single commands. They are named as theyr GNU counterparts, so if you place `bin` in the path before `/usr/bin`, these will be used instead.
+
+You can of course also just run it as a CLI with `bin/gognutil`.
