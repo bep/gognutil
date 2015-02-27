@@ -18,7 +18,7 @@ func Seq(args interface{}) ([]int, error) {
 	intArgs := cast.ToIntSlice(args)
 
 	if len(intArgs) < 1 || len(intArgs) > 3 {
-		return nil, errors.New("invalid number of arguments: <first> [<increment>] [<last>]")
+		return nil, errors.New("invalid number of arguments")
 	}
 
 	var inc int = 1
@@ -44,13 +44,13 @@ func Seq(args interface{}) ([]int, error) {
 		inc = intArgs[1]
 		last = intArgs[2]
 		if inc == 0 {
-			return nil, errors.New("'increment' must not be 0")
+			return nil, errors.New("<increment> must not be equal to 0")
 		}
 		if first < last && inc < 0 {
-			return nil, errors.New("'increment' must be > 0")
+			return nil, errors.New("<increment> must be greater than 0")
 		}
 		if first > last && inc > 0 {
-			return nil, errors.New("'increment' must be < 0")
+			return nil, errors.New("<increment> must be less than 0")
 		}
 	}
 
