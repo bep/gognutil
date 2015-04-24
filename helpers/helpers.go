@@ -12,8 +12,8 @@ func MaxInt(x, y int) int {
 // NumDigits returns the numbers of digits in number.
 // 0 is 1 digit, 1000 is 4.
 func NumDigits(number int) int {
-	var digits int = 0
-	var i int = number
+	var digits int
+	var i = number
 	for {
 		i /= 10
 		digits++

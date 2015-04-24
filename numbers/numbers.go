@@ -21,7 +21,7 @@ func Seq(args interface{}) ([]int, error) {
 		return nil, errors.New("invalid number of arguments")
 	}
 
-	var inc int = 1
+	var inc = 1
 	var last int
 	var first = intArgs[0]
 

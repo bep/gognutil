@@ -17,6 +17,7 @@ func init() {
 	mainCmd.AddCommand(seqCmd())
 }
 
+// Execute is the main entry point.
 func Execute() {
 	mainCmd.Execute()
 }
